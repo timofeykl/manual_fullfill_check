@@ -1,23 +1,4 @@
-SELECT bir_cr.bir
-, dealer.DEALER_GROUP_CD
-, dealer.BRAND
-, dealer.INN
-, dealer.DEALER_NM_RUS
-, dealer.DEALER_NM_ENG
-, dealer.OPEN_DT
-, dealer.CLOSE_DT
-, dealer.STATUS
-, dealer.ASM
-, dealer.ASM_OLD
-, dealer.CITY_NM
-, dealer.ZONE
-, dealer.ZONE_FLASH
-, dealer.INSURANCE_PROG_START_DT
-, dealer.VO_START_DT
-, dealer.USED_PROG_START_DT
-, dealer.ADDRESS
-, dealer.REGION
-, dealer.DEALER_LEGAL_NM
+SELECT!!!
 FROM
   (SELECT DISTINCT(bir)
   FROM DM_SM.CREDIT
