@@ -1,6 +1,6 @@
 SELECT distinct pr.*,
- SUBSTR(cr.FULL_CREDIT_PROGRAM_NM, 0,LENGTH(cr.FULL_CREDIT_PROGRAM_NM) - 8) AS reference_name
-FROM DM_SM.XREF_CREDIT_PROGRAM pr
+ SUBSTR(cr.!!!, 0,LENGTH(cr.!!!) - 8) AS reference_name
+FROM !!!! pr
 RIGHT JOIN
   (SELECT *
   FROM dm_sm.credit
