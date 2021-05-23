@@ -1,6 +1,6 @@
-SELECT prog.credit_program_alias_id,
+SELECT prog.credit_program,
   prog.CREDIT_PROGRAM_ID,
-  prog_cr.full_credit_program_nm
+  prog_cr.full_credit_program_
 FROM
   (SELECT DISTINCT full_credit_program_nm
   FROM DM_SM.CREDIT
@@ -9,8 +9,7 @@ FROM
   AND app_number IS NOT NULL
   ) prog_cr
 LEFT JOIN
-  (SELECT * FROM DM_SM.XREF_CREDIT_PROGRAM_alias
-  ) prog
+  (SELECT * FROM !!!
 ON prog_cr.full_credit_program_nm   = prog.credit_program_alias_nm
 WHERE prog.credit_program_alias_nm IS NULL
 
