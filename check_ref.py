@@ -1,5 +1,5 @@
 print('\n'
-    'dm_sm.bank_subsidy references test\n'
+    '!!!!\n'
       '\n'
       'Wait for further instructions...')
 
@@ -16,18 +16,14 @@ month_input = int(input('Type month:'))
 
 print('Connecting to DWHNW_PDB...')
 dsn_new = """(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)
-(HOST=rnb-vmdwh-dbpr03.rci.renault.ru)(PORT=1521))
-(ADDRESS=(PROTOCOL=TCP)
-(HOST=rnb-vmdwh-dbpr03.rci.renault.ru)(PORT=1521))
-(LOAD_BALANCE= yes))
-(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=DWHNW_PDB)))
+...
 """
-connection_new = cx.connect("iz01340", "iz01340", dsn_new)
+connection_new = cx.connect("...", dsn_new)
 
 print('Query in progress...')
 
 
-print('Checking XREF_DEALER...')
+print('Checking DEALER...')
 query_new = open("dealer_query.sql", "r").read()
 query_new = query_new.format(year_input, month_input, month_input + 1)
 dealer_check = pd.read_sql(query_new,
@@ -88,8 +84,8 @@ print(1)
 credit_alias_null = pd.merge(credit_alias_null,
                              distinct_credit,
                              how='left',
-                             left_on='FULL_CREDIT_PROGRAM_NM_SPACEOUT',
-                             right_on='CREDIT_PROGRAM_NM_SPACEOUT')
+                             left_on='...',
+                             right_on='....')
 
 print(credit_alias_null)
 print(2)
